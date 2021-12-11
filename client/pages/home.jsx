@@ -2,7 +2,7 @@ import React from 'react';
 import HomeHeader from './home-header';
 
 // temp homepage//
-export default class Login extends React.Component {
+export default class Home extends React.Component {
   render() {
     return (
       <div>

@@ -9,35 +9,14 @@ class LoginForm extends React.Component {
       babyName: '',
       password: ''
     };
-    this.handleEmail = this.handleEmail.bind(this);
-    this.handleDueDate = this.handleDueDate.bind(this);
-    this.handleBabyName = this.handleBabyName.bind(this);
-    this.handlePassword = this.handlePassword.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleEmail(event) {
-    this.setState({
-      email: event.target.value
-    });
-  }
-
-  handleDueDate(event) {
-    this.setState({
-      dueDate: event.target.value
-    });
-  }
-
-  handleBabyName(event) {
-    this.setState({
-      babyName: event.target.value
-    });
-  }
-
-  handlePassword(event) {
-    this.setState({
-      password: event.target.value
-    });
+  handleChange(event) {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({ [name]: value });
   }
 
   handleSubmit(event) {
@@ -82,13 +61,13 @@ class LoginForm extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="email">my email:</label>
-          <input required type="email" name="email" id="email" onChange={this.handleEmail} value={email} placeholder="youremail@gmail.com" />
+          <input required type="email" name="email" id="email" placeholder="youremail@gmail.com" value={email} onChange={this.handleChange} />
           <label htmlFor="dueDate">my due date:</label>
-          <input required type="text" name="dueDate" id="dueDate" onChange={this.handleDueDate} value={dueDate} placeholder="mm/dd/yyyy" />
+          <input required type="text" name="dueDate" id="dueDate" placeholder="mm/dd/yyyy" value={dueDate} onChange={this.handleChange} />
           <label htmlFor="babyName">baby&#39;s name:</label>
-          <input required type="text" name="babyName" id="babyName" onChange={this.handleBabyName} value={babyName} placeholder="baby's name" />
+          <input required type="text" name="babyName" id="babyName" placeholder="baby's name" value={babyName} onChange={this.handleChange} />
           <label htmlFor="password">password:</label>
-          <input required type="password" name="password" id="password" onChange={this.handlePassword} value={password} placeholder="10 characters minimum" />
+          <input required type="password" name="password" id="password" placeholder="10 characters minimum" value={password} onChange={this.handleChange} />
           <button className="submit" type="submit">&gt;&gt; Enter</button>
           <p>*All fields are required. Don&#39;t worry! Date and baby name can be edited later.</p>
       </form>
