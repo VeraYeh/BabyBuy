@@ -1,0 +1,59 @@
+body {
+  background-color: rgb(230 241 244);
+  font-family: Rochester, cursive;
+  color: rgb(0 128 169);
+}
+
+#root {
+  padding-top: 1em;
+  margin: 0;
+}
+
+div {
+  margin: 0;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;
+}
+
+input {
+  width: 11em;
+  height: 2em;
+  margin: 0.75em;
+  text-align: center;
+  font-size: 0.85em;
+  font-family: Rochester, cursive;
+  border-style: none;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2.25em;
+}
+
+.submit {
+  font-size: 0.9em;
+  font-family: Rochester, cursive;
+  color: rgb(0 128 169);
+  background-color: rgb(230 241 244);
+  border: none;
+  cursor: pointer;
+  margin: 0 0.75em 0.75em;
+}
+
+.submit:hover {
+  font-size: 0.95em;
+}
+
+p {
+  font-size: 0.5em;
+  margin: 0;
+}

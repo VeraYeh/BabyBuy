@@ -1,8 +1,13 @@
 import React from 'react';
+import HomeHeader from './home-header';
 
-export default function Home(props) {
-  return (
-    <>
-    </>
-  );
+// temp homepage//
+export default class Home extends React.Component {
+  render() {
+    return (
+      <div>
+        <HomeHeader />
+      </div>
+    );
+  }
 }
